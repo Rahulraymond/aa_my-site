@@ -62,11 +62,13 @@ img {
 
 form {
     margin: 20px;
+    width: 70%;
+    margin: 20px auto;
 }
 
 fieldset {
     border: 1px solid #ddd;
-    padding: 10px;
+    padding: 20px;
     border-radius: 8px;
     display: flex;
     flex-direction: column;
@@ -80,9 +82,11 @@ label {
 input,
 textarea {
     /* width: 100%; */
-    padding: 8px;
+    padding: 10px;
     margin-bottom: 16px;
     box-sizing: border-box;
+    border-radius: 8px;
+    border: 1px;
 }
 /* Updated styles for checkbox and label */
 
