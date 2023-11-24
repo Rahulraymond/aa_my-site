@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Page 1</title>
+    <style>
+        /* Add a style for the thank-you message */
+        #thankYouMessage {
+            display: none;
+            margin: 20px;
+
+        }
+    </style>
+    <script>
+        function submitForm() {
+            // Add your email validation or other logic here
+            event.preventDefault();
+            // Hide the form
+            document.getElementById("contactForm").style.display = "none";
+
+            // Show the thank-you message
+            document.getElementById("thankYouMessage").style.display = "block";
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Contact Me</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="form.html">Inquire</a></li>
+            <li><a href="links.html">Sources</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+        </ul>
+    </nav>
+    <form id="contactForm" action="mailto:rahulraymond96@gmail.com" method="post" enctype="text/plain" onsubmit="submitForm()">
+        <fieldset>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="text" id="email" name="email" required>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message"></textarea>
+            <div class="checkbox">
+                <input type="checkbox" id="subscribe" name="subscribe">
+                <label for="subscribe">Subscribe to Newsletter:</label>
+            </div>
+            <button type="submit">Submit</button>
+        </fieldset>
+    </form>
+
+    <!-- Thank-you message -->
+    <div id="thankYouMessage">
+        <p>Thank you for your submission! Will get in touch soon.</p>
+        <p>Return to <a href="index.html">Home</a></p>
+    </div>
+</body>
+</html>
